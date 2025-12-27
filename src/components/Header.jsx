@@ -3,94 +3,7 @@ import Navbar from './Navbar.jsx';
 import { LayeredText } from './ServicesText.jsx';
 const Hero = () => {
   return (
-    <section className="relative bg-black text-white overflow-hidden h-full">
-      {/* Radial gradient background */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(ellipse at center, rgba(99, 102, 241, 0.15) 0%, rgba(0, 0, 0, 0) 70%)',
-        }}
-      />
-
-      {/* Static grid */}
-      <div className="absolute inset-0 bg-grid-white pointer-events-none" />
-
-      {/* Animated lightning bolts */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Lightning 1 - diagonal down-right */}
-        <div
-          className="absolute w-px h-48 bg-linear-to-b from-transparent via-indigo-400 to-transparent"
-          style={{
-            left: '20%',
-            top: '10%',
-            animation: 'lightning-diagonal-down 6s linear infinite',
-            animationDelay: '0s',
-            boxShadow: '0 0 8px rgba(99, 102, 241, 0.8)',
-          }}
-        />
-
-        {/* Lightning 2 - horizontal right */}
-        <div
-          className="absolute h-px w-64 bg-linear-to-r from-transparent via-purple-400 to-transparent"
-          style={{
-            left: '10%',
-            top: '50%',
-            animation: 'lightning-horizontal 7s linear infinite',
-            animationDelay: '1s',
-            boxShadow: '0 0 8px rgba(168, 85, 247, 0.8)',
-          }}
-        />
-
-        {/* Lightning 3 - vertical down */}
-        <div
-          className="absolute w-px h-56 bg-linear-to-b from-transparent via-indigo-300 to-transparent"
-          style={{
-            left: '70%',
-            top: '20%',
-            animation: 'lightning-vertical 5s linear infinite',
-            animationDelay: '2s',
-            boxShadow: '0 0 8px rgba(129, 140, 248, 0.8)',
-          }}
-        />
-
-        {/* Lightning 4 - diagonal up-right */}
-        <div
-          className="absolute w-px h-48 linear-to-b from-transparent via-purple-300 to-transparent"
-          style={{
-            left: '30%',
-            top: '60%',
-            animation: 'lightning-diagonal-up 6.5s linear infinite',
-            animationDelay: '3s',
-            boxShadow: '0 0 8px rgba(216, 180, 254, 0.8)',
-          }}
-        />
-
-        {/* Lightning 5 - reverse diagonal (bottom-right to top-left) */}
-        <div
-          className="absolute w-px h-48 bg-linear-to-b from-transparent via-indigo-400 to-transparent"
-          style={{
-            left: '85%',
-            top: '40%',
-            animation: 'lightning-reverse-diagonal 7s linear infinite',
-            animationDelay: '4s',
-            boxShadow: '0 0 8px rgba(99, 102, 241, 0.8)',
-          }}
-        />
-
-        {/* Lightning 6 - horizontal left */}
-        <div
-          className="absolute h-px w-48 bg-linear-to-r from-transparent via-purple-500 to-transparent"
-          style={{
-            left: '50%',
-            top: '25%',
-            animation: 'lightning-horizontal 5.5s linear infinite',
-            animationDelay: '5s',
-            boxShadow: '0 0 8px rgba(168, 85, 247, 0.8)',
-          }}
-        />
-      </div>
-
+    <section className="relative text-white overflow-hidden h-full">
       <div className="relative max-w-7xl mx-auto px-6 py-8 z-10">
         <div className="logo-and-nav flex items-center justify-between mb-4 relative z-20">
           <img className="h-20" src="/logo.png" alt="Logo" />
@@ -116,7 +29,7 @@ const Hero = () => {
         </div>
         <div className="grid grid-cols-3 gap-6 h-full py-4 mx-auto">
           <div className="flex flex-col gap-6">
-            <div className=" rounded-lg text-white flex items-center justify-center">
+            <div className=" text-white flex items-center justify-center">
               <p className="text-lg text-gray-300 leading-relaxed">
                 We are a creative agency specializing in{' '}
                 <span className="text-white font-semibold">
@@ -153,7 +66,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-linear-to-t from-black to-transparent" />
+      {/* <div className="absolute bottom-0 left-0 w-full h-24 bg-linear-to-t from-black to-transparent" /> */}
     </section>
   );
 };
