@@ -9,6 +9,7 @@ import { cn } from '../lib/utils.js';
 import Lenis from '@studio-freight/lenis';
 import { ZoomParallax } from '../components/ZoomParallax';
 import StatsSection from '../components/StatsSection';
+import NativeSoftwares from '../components/NativeSoftwares.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
@@ -88,7 +89,7 @@ const Home = () => {
           transformStyle: 'preserve-3d',
           ...(isKeyword && {
             backgroundImage:
-              'linear-gradient(90deg, #818cf8, #c084fc, #f472b6, #c084fc, #818cf8)',
+              'linear-gradient(90deg, #ffffff, #9ca3af, #6b7280, #9ca3af, #ffffff)',
             backgroundSize: '200% 100%',
             backgroundPosition: '0% center',
           }),
@@ -159,7 +160,7 @@ const Home = () => {
         <section className="relative flex items-center py-20 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 py-8 text-center relative z-10">
             <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-linear-to-r from-indigo-500/10 to-purple-500/10 rounded-full text-indigo-300 text-sm font-medium border border-indigo-500/20">
+              <span className="inline-block px-4 py-2 bg-linear-to-r from-orange-500/10 to-orange-500/10 rounded-full text-white-300 text-sm font-medium border border-orange-500/20">
                 About Webtomedia
               </span>
             </div>
@@ -175,7 +176,54 @@ const Home = () => {
 
         {/* Services highlights section */}
         <ServicesSection />
-
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex items-center justify-between">
+              <div className="mb-4 max-w-3xl mx-auto">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-indigo-300 text-xs font-medium tracking-wider uppercase mb-6 backdrop-blur-md">
+                  <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+                  Native Softwares
+                </div>
+                <h2 className="text-5xl md:text-7xl font-semibold text-white tracking-tight font-display">
+                  Native Software Products
+                </h2>
+                <p className="text-lg text-white/70 mt-4">
+                  Discover our{' '}
+                  <span className="text-white font-semibold">
+                    high-performance
+                  </span>{' '}
+                  native software products, built for{' '}
+                  <span className="text-white font-semibold">speed</span>,{' '}
+                  <span className="text-white font-semibold">security</span>,
+                  and{' '}
+                  <span className="text-white font-semibold">
+                    seamless integration
+                  </span>{' '}
+                  across platforms. Empower your business with{' '}
+                  <span className="text-white font-semibold">
+                    robust features
+                  </span>
+                  ,{' '}
+                  <span className="text-white font-semibold">
+                    intuitive interfaces
+                  </span>
+                  , and{' '}
+                  <span className="text-white font-semibold">
+                    scalable solutions
+                  </span>{' '}
+                  designed to drive productivity and innovation.
+                </p>
+              </div>
+              <a
+                className="bg-white/10 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-white/20 transition-colors duration-300"
+                href="#"
+              >
+                Request A Demo
+              </a>
+            </div>
+          </div>
+        </section>
+        <NativeSoftwares className="mb-32" />
         {/* Trusted Partners section */}
 
         {/* Processes/workflow section */}

@@ -25,26 +25,38 @@ const ScrollBackground = () => {
             const yPos = 30 + Math.sin(progress * Math.PI * 2) * 20; // 10% to 50%
 
             // Interpolate colors based on scroll progress
-            let color1, color2;
+            let color1, color2, bgColor;
 
-            if (progress < 0.33) {
-              // Start: Indigo to Purple
-              const t = progress / 0.33;
-              color1 = interpolateColor([99, 102, 241], [147, 51, 234], t);
-              color2 = interpolateColor([168, 85, 247], [99, 102, 241], t);
-            } else if (progress < 0.66) {
-              // Middle: Purple to Emerald
-              const t = (progress - 0.33) / 0.33;
-              color1 = interpolateColor([147, 51, 234], [16, 185, 129], t);
-              color2 = interpolateColor([99, 102, 241], [52, 211, 153], t);
+            if (progress < 0.25) {
+              // Start: Deep Blue
+              const t = progress / 0.25;
+              color1 = interpolateColor([30, 58, 138], [37, 99, 235], t);
+              color2 = interpolateColor([59, 130, 246], [30, 58, 138], t);
+              bgColor = interpolateColor([10, 20, 40], [15, 25, 50], t);
+            } else if (progress < 0.5) {
+              // Blue to Orange
+              const t = (progress - 0.25) / 0.25;
+              color1 = interpolateColor([37, 99, 235], [249, 115, 22], t);
+              color2 = interpolateColor([59, 130, 246], [251, 146, 60], t);
+              bgColor = interpolateColor([15, 25, 50], [50, 25, 10], t);
+            } else if (progress < 0.75) {
+              // Orange to Green
+              const t = (progress - 0.5) / 0.25;
+              color1 = interpolateColor([249, 115, 22], [34, 197, 94], t);
+              color2 = interpolateColor([251, 146, 60], [74, 222, 128], t);
+              bgColor = interpolateColor([50, 25, 10], [10, 40, 20], t);
             } else {
-              // End: Emerald to Pink
-              const t = (progress - 0.66) / 0.34;
-              color1 = interpolateColor([16, 185, 129], [219, 39, 119], t);
-              color2 = interpolateColor([52, 211, 153], [147, 51, 234], t);
+              // Green back to Deep Blue
+              const t = (progress - 0.75) / 0.25;
+              color1 = interpolateColor([34, 197, 94], [30, 58, 138], t);
+              color2 = interpolateColor([74, 222, 128], [59, 130, 246], t);
+              bgColor = interpolateColor([10, 40, 20], [10, 20, 40], t);
             }
 
-            gradientRef.current.style.background = `radial-gradient(ellipse at ${xPos}% ${yPos}%, rgba(${color1[0]}, ${color1[1]}, ${color1[2]}, 0.12) 0%, rgba(${color2[0]}, ${color2[1]}, ${color2[2]}, 0.06) 40%, rgba(0, 0, 0, 0) 70%)`;
+            // Update background color
+            containerRef.current.style.backgroundColor = `rgb(${bgColor[0]}, ${bgColor[1]}, ${bgColor[2]})`;
+
+            gradientRef.current.style.background = `radial-gradient(ellipse at ${xPos}% ${yPos}%, rgba(${color1[0]}, ${color1[1]}, ${color1[2]}, 0.25) 0%, rgba(${color2[0]}, ${color2[1]}, ${color2[2]}, 0.15) 40%, rgba(0, 0, 0, 0) 70%)`;
           },
         },
       });

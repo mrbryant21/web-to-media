@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 // --- Data ---
 const services = [
   {
-    title: 'Web Engineering',
+    title: 'Web Design & Development',
     description:
       'High-performance architectures. From corporate landing pages to complex, headless e-commerce platforms.',
     icon: <Monitor className="w-6 h-6" />,
@@ -33,14 +33,14 @@ const services = [
     gradient: 'from-purple-500/20 to-pink-500/20',
   },
   {
-    title: 'Growth Marketing',
+    title: 'Digital Marketing',
     description: 'Data-driven SEO, PPC, and social strategies.',
     icon: <Megaphone className="w-6 h-6" />,
     colSpan: 'md:col-span-1 lg:col-span-1',
     gradient: 'from-orange-500/20 to-red-500/20',
   },
   {
-    title: 'Mobile Ecosystems',
+    title: 'Mobile and Web Applications',
     description: 'Native and cross-platform apps built with React Native.',
     icon: <Smartphone className="w-6 h-6" />,
     colSpan: 'md:col-span-2 lg:col-span-2',
@@ -175,9 +175,9 @@ const ServicesSection = () => {
               <Code2 className="w-3 h-3" />
               <span>Digital Transformation</span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-semibold text-white tracking-tight font-display">
+            <h2 className="text-7xl md:text-7xl font-semibold text-white tracking-tight font-display">
               Building the{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-neutral-200 to-neutral-500">
                 digital future.
               </span>
             </h2>
@@ -217,7 +217,7 @@ const ServicesSection = () => {
                 <div className="p-8 h-full flex flex-col relative z-10">
                   {/* Hover Gradient Bloom */}
                   <div
-                    className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500 pointer-events-none`}
+                    className={`absolute top-0 right-0 w-32 h-32 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500 pointer-events-none`}
                   />
 
                   <div className="flex items-start justify-between mb-8">
