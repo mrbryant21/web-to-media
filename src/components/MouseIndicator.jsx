@@ -24,7 +24,7 @@ const MouseIndicator = () => {
           top: position.y,
           transform: 'translate(-50%, -50%)',
         }}
-        className="fixed pointer-events-none z-50 w-10 h-10 rounded-full border-2 border-orange-500/40 transition-transform duration-75 ease-out"
+        className="fixed pointer-events-none z-50 w-10 h-10 rounded-full border-2 border-neutral-500/40 transition-transform duration-75 ease-out"
       ></div>
 
       {/* Inner dot */}
@@ -34,7 +34,7 @@ const MouseIndicator = () => {
           top: position.y,
           transform: 'translate(-50%, -50%)',
         }}
-        className="fixed pointer-events-none z-50 w-2 h-2 rounded-full bg-orange-500/40 transition-transform duration-75 ease-out"
+        className="fixed pointer-events-none z-50 w-2 h-2 rounded-full bg-neutral-500/40 transition-transform duration-75 ease-out"
       ></div>
     </>
   );

@@ -10,6 +10,9 @@ import Lenis from '@studio-freight/lenis';
 import { ZoomParallax } from '../components/ZoomParallax';
 import StatsSection from '../components/StatsSection';
 import NativeSoftwares from '../components/NativeSoftwares.jsx';
+import NewsInsights from '../components/NewsAndInsights.jsx';
+import TestimonialSection from '../components/TestimonialSection.jsx';
+import Footer from '../components/Footer.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
@@ -160,7 +163,7 @@ const Home = () => {
         <section className="relative flex items-center py-20 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 py-8 text-center relative z-10">
             <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-linear-to-r from-orange-500/10 to-orange-500/10 rounded-full text-white-300 text-sm font-medium border border-orange-500/20">
+              <span className="inline-block px-4 py-2 bg-linear-to-r from-neutral-500/10 to-neutral-500/10 rounded-full text-white-300 text-sm font-medium border border-neutral-500/20">
                 About Webtomedia
               </span>
             </div>
@@ -180,8 +183,8 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-between">
               <div className="mb-4 max-w-3xl mx-auto">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-indigo-300 text-xs font-medium tracking-wider uppercase mb-6 backdrop-blur-md">
-                  <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-medium tracking-wider uppercase mb-6 backdrop-blur-md">
+                  <span className="w-2 h-2 rounded-full bg-neutral-500 animate-pulse" />
                   Native Softwares
                 </div>
                 <h2 className="text-5xl md:text-7xl font-semibold text-white tracking-tight font-display">
@@ -233,8 +236,8 @@ const Home = () => {
         <div className="mb-8 max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between">
             <div className="mb-4 max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-indigo-300 text-xs font-medium tracking-wider uppercase mb-6 backdrop-blur-md">
-                <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-medium tracking-wider uppercase mb-6 backdrop-blur-md">
+                <span className="w-2 h-2 rounded-full bg-neutral-500 animate-pulse" />
                 Portfolio
               </div>
               <h2 className="text-5xl md:text-7xl font-semibold text-white tracking-tight font-display">
@@ -258,11 +261,12 @@ const Home = () => {
         {/* Impact Metrics/Statistics Section */}
         <StatsSection />
         {/* Testimonials Section */}
-
+        <TestimonialSection />
         {/* CTA section */}
         {/* News & Insights */}
-
+        <NewsInsights />
         {/* Footer */}
+        <Footer />
       </div>
     </div>
   );

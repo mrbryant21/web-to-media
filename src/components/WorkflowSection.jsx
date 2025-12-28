@@ -136,12 +136,12 @@ const WorkflowSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* --- Header --- */}
         <div className="mb-24 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-indigo-300 text-xs font-medium tracking-wider uppercase mb-6 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-medium tracking-wider uppercase mb-6 backdrop-blur-md">
+            <span className="w-2 h-2 rounded-full bg-neutral-500 animate-pulse" />
             Process
           </div>
           <h2 className="text-5xl md:text-7xl font-semibold text-white tracking-tight font-display">
-            How we Bring{' '} <br />
+            How we Bring <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-500">
               Ideas to Life
             </span>
@@ -238,11 +238,11 @@ const WorkflowSection = () => {
                         className={`space-y-2 ${index % 2 === 0 ? 'md:items-end' : 'md:items-start'} flex flex-col`}
                       >
                         <li className="flex items-center gap-2 text-sm text-neutral-500">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                          <CheckCircle2 className="w-4 h-4 text-neutral-500" />
                           <span>Strategic Implementation</span>
                         </li>
                         <li className="flex items-center gap-2 text-sm text-neutral-500">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                          <CheckCircle2 className="w-4 h-4 text-neutral-500" />
                           <span>Quality Assurance</span>
                         </li>
                       </ul>

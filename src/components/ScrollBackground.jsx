@@ -94,7 +94,7 @@ const ScrollBackground = () => {
       />
 
       {/* Static grid with blur */}
-      <div className="absolute inset-0 bg-grid-white blur-md" />
+      <div className="absolute inset-0 bg-grid-white blur-lg" />
 
       {/* Animated lightning bolts */}
       <div className="absolute inset-0 overflow-hidden">

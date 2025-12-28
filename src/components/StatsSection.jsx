@@ -129,7 +129,7 @@ const StatsSection = () => {
                   >
                     0
                   </span>
-                  <span className="text-3xl md:text-4xl font-light text-indigo-400 opacity-80">
+                  <span className="text-3xl md:text-4xl font-light text-neutral-400 opacity-80">
                     {stat.suffix}
                   </span>
                 </div>

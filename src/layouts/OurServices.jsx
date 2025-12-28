@@ -23,49 +23,49 @@ const services = [
       'High-performance architectures. From corporate landing pages to complex, headless e-commerce platforms.',
     icon: <Monitor className="w-6 h-6" />,
     colSpan: 'md:col-span-2 lg:col-span-2',
-    gradient: 'from-blue-500/20 to-cyan-500/20',
+    gradient: 'from-neutral-500/20 to-neutral-400/20',
   },
   {
     title: 'Proprietary Software',
     description: 'Custom-built SaaS tools solving specific industry gaps.',
     icon: <Layers className="w-6 h-6" />,
     colSpan: 'md:col-span-1 lg:col-span-1',
-    gradient: 'from-purple-500/20 to-pink-500/20',
+    gradient: 'from-neutral-500/20 to-neutral-400/20',
   },
   {
     title: 'Digital Marketing',
     description: 'Data-driven SEO, PPC, and social strategies.',
     icon: <Megaphone className="w-6 h-6" />,
     colSpan: 'md:col-span-1 lg:col-span-1',
-    gradient: 'from-orange-500/20 to-red-500/20',
+    gradient: 'from-neutral-500/20 to-neutral-400/20',
   },
   {
     title: 'Mobile and Web Applications',
     description: 'Native and cross-platform apps built with React Native.',
     icon: <Smartphone className="w-6 h-6" />,
     colSpan: 'md:col-span-2 lg:col-span-2',
-    gradient: 'from-emerald-500/20 to-teal-500/20',
+    gradient: 'from-neutral-500/20 to-neutral-400/20',
   },
   {
     title: 'Cloud Infrastructure',
     description: '99.9% uptime, auto-scaling, and secure environments.',
     icon: <Server className="w-6 h-6" />,
     colSpan: 'md:col-span-1 lg:col-span-1',
-    gradient: 'from-indigo-500/20 to-violet-500/20',
+    gradient: 'from-neutral-500/20 to-neutral-400/20',
   },
   {
     title: 'Brand Identity',
     description: 'Visual storytelling, logo design, and physical print.',
     icon: <Printer className="w-6 h-6" />,
     colSpan: 'md:col-span-1 lg:col-span-1',
-    gradient: 'from-pink-500/20 to-rose-500/20',
+    gradient: 'from-neutral-500/20 to-neutral-400/20',
   },
   {
     title: 'Multimedia Production',
     description: 'Motion graphics and 4K video production.',
     icon: <Video className="w-6 h-6" />,
     colSpan: 'md:col-span-1 lg:col-span-1',
-    gradient: 'from-yellow-500/20 to-amber-500/20',
+    gradient: 'from-neutral-500/20 to-neutral-400/20',
   },
 ];
 
@@ -161,8 +161,8 @@ const ServicesSection = () => {
   return (
     <section ref={sectionRef} className="relative py-24 px-6 overflow-hidden">
       {/* Ambient Background Glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[128px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[128px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-neutral-500/10 rounded-full blur-[128px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neutral-500/10 rounded-full blur-[128px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
@@ -181,7 +181,7 @@ const ServicesSection = () => {
                 digital future.
               </span>
             </h2>
-            <p className='mt-4'>
+            <p className="mt-4">
               Empowering brands and businesses with a full spectrum of digital
               services, we blend engineering, creativity, and strategy to
               deliver solutions that drive growth and innovation. From robust

@@ -11,12 +11,12 @@ const Hero = () => {
           <div className="space-x-4 flex items-center">
             <a
               href=""
-              className="bg-white flex items-center text-stone-500 py-2 px-4 rounded-full hover:translate-x-1 transition"
+              className="bg-white flex items-center text-neutral-500 py-2 px-4 rounded-full hover:translate-x-1 transition"
             >
               Ready to go Digital?
               <ArrowRight
                 size={20}
-                className="ml-2 bg-purple-600 text-white p-1 rounded-full"
+                className="ml-2 bg-neutral-600 text-white p-1 rounded-full"
               />
             </a>
             <Navbar />
@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="grid grid-cols-3 gap-6 h-full py-4 mx-auto">
           <div className="flex flex-col gap-6">
             <div className=" text-white flex items-center justify-center">
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-neutral-300 leading-relaxed">
                 We are a creative agency specializing in{' '}
                 <span className="text-white font-semibold">
                   web development

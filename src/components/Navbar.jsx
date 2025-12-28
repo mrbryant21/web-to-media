@@ -47,35 +47,35 @@ const Navbar = () => {
           <a
             href="/"
             onClick={() => setOpen(false)}
-            className="hover:text-indigo-400 transition"
+            className="hover:text-neutral-400 transition"
           >
             Home
           </a>
           <a
             href="/about"
             onClick={() => setOpen(false)}
-            className="hover:text-indigo-400 transition"
+            className="hover:text-neutral-400 transition"
           >
             About
           </a>
           <a
             href="/services"
             onClick={() => setOpen(false)}
-            className="hover:text-indigo-400 transition"
+            className="hover:text-neutral-400 transition"
           >
             Services
           </a>
           <a
             href="/work"
             onClick={() => setOpen(false)}
-            className="hover:text-indigo-400 transition"
+            className="hover:text-neutral-400 transition"
           >
             Work
           </a>
           <a
             href="/contact"
             onClick={() => setOpen(false)}
-            className="hover:text-indigo-400 transition"
+            className="hover:text-neutral-400 transition"
           >
             Contact
           </a>
