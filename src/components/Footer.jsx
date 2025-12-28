@@ -11,7 +11,7 @@ export default function Footer() {
           whitespace-nowrap: Keeps the name on one line
       */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-        <h1 className="font-black text-neutral-900 text-[18vw] leading-none opacity-40 select-none whitespace-nowrap tracking-tighter">
+        <h1 className="font-black text-neutral-800 text-[18vw] leading-none opacity-40 select-none whitespace-nowrap tracking-tighter">
           WEBTOMEDIA
         </h1>
       </div>
@@ -113,7 +113,7 @@ export default function Footer() {
               />
               <button
                 type="button"
-                className="bg-neutral-500 text-neutral-950 font-semibold rounded-lg px-4 py-3 text-sm hover:bg-neutral-400 transition-colors"
+                className="bg-white text-neutral-950 font-semibold rounded-lg px-4 py-3 text-sm hover:bg-neutral-400 transition-colors"
               >
                 Subscribe
               </button>

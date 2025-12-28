@@ -1,8 +1,7 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import React from 'react';
 
 function LayeredText({
   lines = [
@@ -21,7 +20,6 @@ function LayeredText({
   className = '',
 }) {
   const containerRef = useRef(null);
-  const timelineRef = useRef();
 
   const calculateTranslateX = (index) => {
     const baseOffset = 35;
@@ -36,52 +34,52 @@ function LayeredText({
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const container = containerRef.current;
-    const listItems = container.querySelectorAll('li');
+    let ctx = gsap.context(() => {
+      const listItems = containerRef.current.querySelectorAll('li');
 
-    timelineRef.current = gsap.timeline({ paused: true });
+      // The Timeline: Infinite loop with a small delay between waves
+      const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
 
-    timelineRef.current.to(listItems, {
-      y: window.innerWidth >= 768 ? -lineHeight : -lineHeightMd,
-      duration: 0.8,
-      ease: 'power2.out',
-      stagger: 0.08,
-    });
+      // The Animation: A wave of light passing through the stack
+      tl.to(listItems, {
+        color: '#22d3ee', // Cyan-400 (matches your Hero text)
+        textShadow: '0 0 25px rgba(34, 211, 238, 0.8)', // Strong glow
+        duration: 0.8, // How fast the light pulses on a single layer
+        ease: 'power2.inOut',
 
-    const handleMouseEnter = () => {
-      timelineRef.current?.play();
-    };
+        // This stagger config creates the "wave" effect
+        stagger: {
+          each: 0.15, // Delay between each layer lighting up
+          from: 'end', // Start from the bottom ('end') and move up
+          yoyo: true, // Go back to original color immediately
+          repeat: 1, // Pulse once (Light ON -> Light OFF) per cycle
+        },
+      });
+    }, containerRef);
 
-    const handleMouseLeave = () => {
-      timelineRef.current?.reverse();
-    };
-
-    container.addEventListener('mouseenter', handleMouseEnter);
-    container.addEventListener('mouseleave', handleMouseLeave);
-
-    return () => {
-      container.removeEventListener('mouseenter', handleMouseEnter);
-      container.removeEventListener('mouseleave', handleMouseLeave);
-      timelineRef.current?.kill();
-    };
-  }, [lines, lineHeight, lineHeightMd]);
+    return () => ctx.revert();
+  }, [lines]);
 
   return (
     <div
       ref={containerRef}
-      className={`mx-auto font-sans font-black tracking-[-2px] uppercase text-black dark:text-white antialiased cursor-pointer relative z-10 ${className}`}
-      style={{ fontSize, '--md-font-size': fontSizeMd, pointerEvents: 'auto' }}
+      // Added 'text-neutral-700' and 'dark:text-neutral-600' as a darker base
+      // so the glow pops more when it happens.
+      className={`mx-auto font-sans font-black tracking-[-2px] uppercase text-neutral-700 dark:text-neutral-600 antialiased cursor-default relative z-10 ${className}`}
+      style={{ fontSize, '--md-font-size': fontSizeMd }}
     >
       <ul className="list-none p-0 m-0 flex flex-col items-center">
         {lines.map((line, index) => {
           const translateX = calculateTranslateX(index);
+          const isEven = index % 2 === 0;
+
           return (
             <li
               key={index}
               className={`
-                relative overflow-hidden
+                relative overflow-hidden transition-colors
                 ${
-                  index % 2 === 0
+                  isEven
                     ? 'transform-[skew(60deg,-30deg)_scaleY(0.66667)]'
                     : 'transform-[skew(0deg,-30deg)_scaleY(1.33333)]'
                 }
@@ -89,8 +87,8 @@ function LayeredText({
               style={{
                 height: `${lineHeight}px`,
                 transform: `translateX(${translateX.desktop}px) skew(${
-                  index % 2 === 0 ? '60deg, -30deg' : '0deg, -30deg'
-                }) scaleY(${index % 2 === 0 ? '0.66667' : '1.33333'})`,
+                  isEven ? '60deg, -30deg' : '0deg, -30deg'
+                }) scaleY(${isEven ? '0.66667' : '1.33333'})`,
                 '--md-height': `${lineHeightMd}px`,
                 '--md-translateX': `${translateX.mobile}px`,
               }}
@@ -124,4 +122,5 @@ function LayeredText({
     </div>
   );
 }
+
 export { LayeredText };

@@ -30,15 +30,15 @@ const ScrollBackground = () => {
             if (progress < 0.25) {
               // Start: Deep Blue
               const t = progress / 0.25;
-              color1 = interpolateColor([30, 58, 138], [37, 99, 235], t);
-              color2 = interpolateColor([59, 130, 246], [30, 58, 138], t);
-              bgColor = interpolateColor([10, 20, 40], [15, 25, 50], t);
+              color1 = interpolateColor([15, 29, 69], [18, 49, 117], t);
+              color2 = interpolateColor([29, 65, 123], [15, 29, 69], t);
+              bgColor = interpolateColor([5, 10, 20], [7, 12, 25], t);
             } else if (progress < 0.5) {
               // Blue to Orange
               const t = (progress - 0.25) / 0.25;
-              color1 = interpolateColor([37, 99, 235], [249, 115, 22], t);
-              color2 = interpolateColor([59, 130, 246], [251, 146, 60], t);
-              bgColor = interpolateColor([15, 25, 50], [50, 25, 10], t);
+              color1 = interpolateColor([18, 49, 117], [249, 115, 22], t);
+              color2 = interpolateColor([29, 65, 123], [251, 146, 60], t);
+              bgColor = interpolateColor([7, 12, 25], [50, 25, 10], t);
             } else if (progress < 0.75) {
               // Orange to Green
               const t = (progress - 0.5) / 0.25;
@@ -48,9 +48,9 @@ const ScrollBackground = () => {
             } else {
               // Green back to Deep Blue
               const t = (progress - 0.75) / 0.25;
-              color1 = interpolateColor([34, 197, 94], [30, 58, 138], t);
-              color2 = interpolateColor([74, 222, 128], [59, 130, 246], t);
-              bgColor = interpolateColor([10, 40, 20], [10, 20, 40], t);
+              color1 = interpolateColor([34, 197, 94], [15, 29, 69], t);
+              color2 = interpolateColor([74, 222, 128], [29, 65, 123], t);
+              bgColor = interpolateColor([10, 40, 20], [5, 10, 20], t);
             }
 
             // Update background color
