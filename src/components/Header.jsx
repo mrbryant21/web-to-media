@@ -67,10 +67,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={comp} className="relative text-white overflow-hidden h-screen">
+    <section ref={comp} className="relative text-white overflow-hidden h-full">
       <div className="relative max-w-7xl mx-auto px-6 py-8 z-10">
         {/* NAV SECTION */}
-        <div className="logo-and-nav flex items-center justify-between mb-4 relative z-20">
+        <div className="logo-and-nav flex items-center justify-between mb-4 relative z-20 sm:flex sm:flex-col">
           <img className="h-20 hero-nav-item" src="/logo.png" alt="Logo" />
 
           <div className="space-x-4 flex items-center">
