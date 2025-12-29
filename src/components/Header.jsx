@@ -76,19 +76,14 @@ const Hero = () => {
           <div className="space-x-4 flex items-center">
             <a
               href=""
-              className="bg-white flex items-center text-neutral-500 py-2 px-4 rounded-full hover:translate-x-1 transition"
+              className="bg-white flex items-center text-stone-950 py-2 px-4 rounded-full hover:translate-x-1 transition"
             >
               Ready to go Digital?
               <ArrowRight
                 size={20}
-                className="ml-2 bg-neutral-600 text-white p-1 rounded-full"
+                className="ml-2 bg-[var(--blue)] text-white p-1 rounded-full"
               />
             </a>
-
-            {/* We wrap the Navbar in a div for animation targeting.
-              The 'clearProps' in the GSAP code ensures that once this fades in,
-              it stops affecting the positioning of the menu inside.
-            */}
             <div className="relative z-50">
               <Navbar />
             </div>
@@ -97,7 +92,7 @@ const Hero = () => {
 
         {/* HEADLINE SECTION */}
         <div className="flex items-center justify-center mx-auto text-center mb-4">
-          <h1 className="text-7xl font-bold text-white leading-tight overflow-hidden">
+          <h1 className="text-7xl font-bold text-stone-950 leading-tight overflow-hidden">
             <span className="inline-block overflow-hidden align-top">
               <span className="inline-block hero-headline-word">Digital</span>
             </span>{' '}
@@ -119,15 +114,15 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 h-full py-4 mx-auto">
           {/* LEFT COLUMN */}
           <div className="flex flex-col gap-6">
-            <div className="text-white flex items-center justify-center hero-text-left">
-              <p className="text-lg text-neutral-300 leading-relaxed">
+            <div className="text-stone-950 flex items-center justify-center hero-text-left">
+              <p className="text-lg text-neutral-800 leading-relaxed">
                 We are a creative agency specializing in{' '}
-                <span className="text-white font-semibold">
+                <span className="text-stone-950 font-semibold">
                   web development
                 </span>
-                , <span className="text-white font-semibold">UI/UX design</span>
+                , <span className="text-stone-950 font-semibold">UI/UX design</span>
                 , and{' '}
-                <span className="text-white font-semibold">
+                <span className="text-stone-950 font-semibold">
                   digital strategy
                 </span>
                 . We help brands grow by building modern, scalable, and

@@ -42,8 +42,8 @@ function LayeredText({
 
       // The Animation: A wave of light passing through the stack
       tl.to(listItems, {
-        color: '#22d3ee', // Cyan-400 (matches your Hero text)
-        textShadow: '0 0 25px rgba(34, 211, 238, 0.8)', // Strong glow
+        color: '#D9261A', // Cyan-400 (matches your Hero text)
+        textShadow: '0 0 25px rgba(217, 38, 26, 0.8)', // Strong glow
         duration: 0.8, // How fast the light pulses on a single layer
         ease: 'power2.inOut',
 

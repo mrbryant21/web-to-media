@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useLayoutEffect, useRef } from 'react';
 import ServicesSection from '../layouts/OurServices';
-import ScrollBackground from '../components/ScrollBackground';
+// import ScrollBackground from '../components/ScrollBackground';
 import WorkflowSection from '../components/WorkflowSection';
 import { cn } from '../lib/utils.js';
 import Lenis from '@studio-freight/lenis';
@@ -155,7 +155,7 @@ const Home = () => {
   ];
   return (
     <div className="hompage relative">
-      <ScrollBackground />
+      {/* <ScrollBackground /> */}
       <div className="relative z-10">
         <Header />
 
